@@ -11,7 +11,7 @@ namespace TimeSheetManagement
     {
         public void submitTimeSheet(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
         {
-        Case2Entry:
+            Case2Entry:
             Console.Write("Enter User ID: ");
 
             int submitUserId = int.Parse(Console.ReadLine());

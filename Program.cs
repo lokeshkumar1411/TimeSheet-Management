@@ -12,7 +12,7 @@ namespace TimeSheetManagement
             Register register = new Register();
             Manager managerEntry = new Manager();
             SubmitTimeSheet submitTimeSheet = new SubmitTimeSheet();
-            ViewUserTimeSheet viewUserTimeSheet = new ViewUserTimeSheet();
+            //ViewUserTimeSheet viewUserTimeSheet = new ViewUserTimeSheet();
 
             Dictionary<int, List<TimeSheetEntry>> userTimeSheets = new Dictionary<int, List<TimeSheetEntry>>();
             while (true)
