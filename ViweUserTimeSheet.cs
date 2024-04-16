@@ -12,6 +12,7 @@ namespace TimeSheetManagement
         public void ViewUserTimeSheet(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
         {
             Console.Write("Enter User ID: ");
+            Console.Write("Enter User ID: ");
             int viewUserId = int.Parse(Console.ReadLine());
             if (userTimeSheets.ContainsKey(viewUserId))
             {
