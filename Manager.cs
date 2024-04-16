@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManagement
 {
-    public class Manager : Register
+    public class Manager : ViewUserTimeSheet
     {
-        public void ViewAllTimeSheets(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
+        public void ViewTimeSheet(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
+        {
+            viewUserTimeSheet(userTimeSheets);
+        }
+
+        //manager only feature
+        private void ViewAllTimeSheets(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
         {
             if (userTimeSheets.Count == 0)
             {
@@ -29,6 +35,11 @@ namespace TimeSheetManagement
                 }
             }
 
+        }
+
+        public void viewAllSheetAccess(Dictionary<int, List<TimeSheetEntry>> userTimeSheets)
+        {
+            ViewAllTimeSheets(userTimeSheets);
         }
     }
 }

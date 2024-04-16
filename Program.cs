@@ -6,12 +6,13 @@ namespace TimeSheetManagement
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Register register = new Register();
             Manager managerEntry = new Manager();
             SubmitTimeSheet submitTimeSheet = new SubmitTimeSheet();
-            ViweUserTimeSheet viweUserTimeSheet = new ViweUserTimeSheet();
+            ViewUserTimeSheet viewUserTimeSheet = new ViewUserTimeSheet();
 
             Dictionary<int, List<TimeSheetEntry>> userTimeSheets = new Dictionary<int, List<TimeSheetEntry>>();
             while (true)
@@ -35,8 +36,7 @@ namespace TimeSheetManagement
                     {
                         Console.WriteLine("1. Register User");
                         Console.WriteLine("2. Submit Timesheet");
-                        Console.WriteLine("3. View Timesheet");
-                        Console.WriteLine("4. Menu");
+                        Console.WriteLine("3. Menu");
                         Console.Write("Enter your choice: ");
                         int choice = int.Parse(Console.ReadLine());
                         Console.WriteLine();
@@ -51,12 +51,7 @@ namespace TimeSheetManagement
                                 submitTimeSheet.submitTimeSheet(userTimeSheets);
                                 break;
 
-
                             case 3:
-                                viweUserTimeSheet.ViewUserTimeSheet(userTimeSheets);
-                                break;
-
-                            case 4:
                                 Console.WriteLine("Thanks for the Submission. Have a Nice Day.");
                                 goto personlabel;
 
@@ -86,11 +81,11 @@ namespace TimeSheetManagement
                         switch (Managerchoice)
                         {
                             case 1:
-                                viweUserTimeSheet.ViewUserTimeSheet(userTimeSheets);
+                                managerEntry.ViewTimeSheet(userTimeSheets);
                                 break;
 
                             case 2:
-                                managerEntry.ViewAllTimeSheets(userTimeSheets);
+                                managerEntry.viewAllSheetAccess(userTimeSheets);
                                 break;
 
                             case 3:

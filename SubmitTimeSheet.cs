@@ -13,6 +13,7 @@ namespace TimeSheetManagement
         {
         Case2Entry:
             Console.Write("Enter User ID: ");
+
             int submitUserId = int.Parse(Console.ReadLine());
             if (submitUserId is int)
             {
