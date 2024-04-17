@@ -9,10 +9,11 @@ namespace TimeSheetManagement
 
         static void Main(string[] args)
         {
-            Register register = new Register();
-            Manager managerEntry = new Manager();
-            SubmitTimeSheet submitTimeSheet = new SubmitTimeSheet();
+            Register register = new();
+            Manager managerEntry = new();
+            SubmitTimeSheet submitTimeSheet = new();
             //ViewUserTimeSheet viewUserTimeSheet = new ViewUserTimeSheet();
+            Console.WriteLine("hello");
 
             Dictionary<int, List<TimeSheetEntry>> userTimeSheets = new Dictionary<int, List<TimeSheetEntry>>();
             while (true)
